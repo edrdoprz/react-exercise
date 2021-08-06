@@ -10,6 +10,7 @@ const Layout = styled.div`
   width: 100%;
 `;
 const Container = styled.div`
+  background-color: #F7F9FA;
   height: 100%;
   width: 100%;
 `;
