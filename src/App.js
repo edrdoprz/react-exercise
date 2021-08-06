@@ -12,11 +12,39 @@ const Subheader = styled.div`
   width: 100%;
   align-items: center;
 `;
+const ColumnsContainer = styled.div`
+  display: flex;
+  flex: 1;
+  padding: 8px;
+  gap: 8px;
+`;
+const LeftColumn = styled.div`
+  display: flex;
+  background-color: white;
+  flex: 0.9;
+`;
+const RightColumn = styled.div`
+  display: flex;
+  background-color: white;
+  flex: 1.1;
+`;
+const PersonTabs = styled.div`
+  display: flex;
+  background-color: white;
+  flex: 2;
+`;
 
 export const App = ({ children }) => {
   return (
     <>
       <Subheader>People</Subheader>
+      <ColumnsContainer>
+        <LeftColumn></LeftColumn>
+
+        <PersonTabs></PersonTabs>
+
+        <RightColumn></RightColumn>
+      </ColumnsContainer>
     </>
   );
 };

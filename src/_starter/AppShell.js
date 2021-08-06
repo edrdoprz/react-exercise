@@ -1,8 +1,10 @@
 import { React } from "react";
+import styled from "styled-components";
+
+import { App } from "../App";
 import { LeftNav } from "./Navigation/LeftNav/LeftNav";
 import { TopNav } from "./Navigation/TopNav/TopNav";
-import { App } from "../App";
-import styled from "styled-components";
+import { getColor } from "./theme/theme";
 
 const Layout = styled.div`
   display: flex;
@@ -10,7 +12,9 @@ const Layout = styled.div`
   width: 100%;
 `;
 const Container = styled.div`
-  background-color: #F7F9FA;
+  background-color: ${getColor('bgGrey')};
+  display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
 `;
