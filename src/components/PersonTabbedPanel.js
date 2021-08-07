@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useState } from "react";
 import styled from "styled-components";
 
 import { TabbedPanel } from "./TabbedPanel";
@@ -15,10 +15,18 @@ const TABS = [
   { id: "reminders", label: "Reminders" },
 ];
 
-export const PersonTabbedPanel = ({ children }) => {
+export const PersonTabbedPanel = () => {
+  const [currentTab, setCurrentTab] = useState({ ...TABS[0] });
+
   return (
     <Container className="person-tabbed-panel">
-      <TabbedPanel tabs={TABS}>Content</TabbedPanel>
+      <TabbedPanel
+        currentTab={currentTab}
+        tabs={TABS}
+        onTabClick={setCurrentTab}
+      >
+        Content
+      </TabbedPanel>
     </Container>
   );
 };
