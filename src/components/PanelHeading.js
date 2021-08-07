@@ -10,8 +10,8 @@ const Container = styled.div`
   border-bottom: 1px solid ${getColor("greyLightest")};
 `;
 
-export const PanelHeading = ({ children }) => {
-  return <Container>{children}</Container>;
+export const PanelHeading = ({ children, className }) => {
+  return <Container className={className}>{children}</Container>;
 };
 
 // Panel.defaultProps = {

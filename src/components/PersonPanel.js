@@ -3,20 +3,23 @@ import { React } from "react";
 import styled from "styled-components";
 
 import { getColor } from "../_starter/theme/theme";
+import { IconButton } from "./IconButton";
 import { Panel } from "./Panel";
 import { PanelHeading } from "./PanelHeading";
 
-// const Container = styled.div`
-//   display: flex;
-//   background-color: white;
-//   border: 1px solid ${getColor("greyLightest")};
-//   flex-direction: column;
-// `;
+const StyledPanelHeading = styled(PanelHeading)`
+  padding: 8px 15px;
+  justify-content: space-between;
+  align-items: center;
+`;
 
 export const PersonPanel = ({ children }) => {
   return (
     <Panel>
-      <PanelHeading>Person</PanelHeading>
+      <StyledPanelHeading>
+        <IconButton icon="StarOutlined" iconColor="orange" iconHeight="17px" iconWidth="17px" onClick={() => console.log('star clicked')} />
+        <IconButton icon="EllipsisHorizontal" iconHeight="17px" iconWidth="17px" />
+      </StyledPanelHeading>
       <div>Panel</div>
     </Panel>
   );
