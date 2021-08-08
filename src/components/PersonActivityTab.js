@@ -1,5 +1,6 @@
 import { React } from "react";
 import styled from "styled-components";
+import { PersonActivityActions } from "./PersonActivityActions";
 
 const Container = styled.div`
   display: flex;
@@ -9,7 +10,7 @@ const Container = styled.div`
 export const PersonActivityTab = ({ children }) => {
   return (
     <Container>
-      Activity
+      <PersonActivityActions />
     </Container>
   );
 };

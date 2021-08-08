@@ -16,6 +16,13 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
+const Label = styled.label`
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  padding-left: 4px;
+`;
+
 const getIcon = (iconName) =>
   lazy(() => import(`../_starter/shared/Icons/${iconName}.js`));
 
@@ -25,6 +32,7 @@ export const IconButton = ({
   iconColor,
   iconHeight,
   iconWidth,
+  label,
   onClick,
 }) => {
   const [iconView, setIconView] = useState([]);
@@ -40,6 +48,7 @@ export const IconButton = ({
     <Suspense fallback="...">
       <Button iconColor={iconColor} onClick={onClick}>
         {iconView}
+        {label && <Label>{label}</Label>}
       </Button>
     </Suspense>
   );
@@ -60,4 +69,6 @@ IconButton.propTypes = {
   iconHeight: PropTypes.string,
   // width of icon expressed as valid css value (ie. 1em, 20px, etc.)
   iconWidth: PropTypes.string,
+  // optional label for button
+  label: PropTypes.string,
 };
