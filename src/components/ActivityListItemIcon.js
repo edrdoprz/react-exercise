@@ -28,7 +28,7 @@ export const ActivityListItemIcon = ({ activity, className }) => {
   if (activity.type === "voicemail" || activity.type === "call") {
     iconColor = getColor("teal");
     bgColor = "#E7F8F8";
-  } else if (activity.type === "") {
+  } else if (activity.type === "added_to_cadence") {
     iconColor = "#569BCD";
     bgColor = "#F0F9FE";
   }

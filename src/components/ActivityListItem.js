@@ -1,6 +1,8 @@
 import { React } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { format } from "date-fns";
+
 import { ActivityListItemIcon } from "./ActivityListItemIcon";
 import { getColor } from "../_starter/theme/theme";
 
@@ -14,7 +16,7 @@ const DetailsContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-left: 16px;
-  padding: 16px;
+  padding: 12px 16px;
   border: 1px solid ${getColor('greyLightest')};
   flex: 1;
 `
@@ -22,24 +24,28 @@ const DetailsContainer = styled.div`
 const TimeContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  align-items: flex-end;
   font-weight: 600;
   font-size: 12px;
+  color: ${getColor('grey')};
 
   span:first-child {
     margin-bottom: 5px;
+    text-align: end;
   }
 `
 
 export const ActivityListItem = ({ activity, children, className }) => {
+  const date = new Date(activity.created_at)
+
   return (
     <ListItem className={className}>
       <ActivityListItemIcon activity={activity} />
       <DetailsContainer>
         {children}
         <TimeContainer>
-          <span>{activity.created_at}</span>
-          <span>{activity.created_at}</span>
+          <span>{format(date, 'MMM d, yyyy')}</span>
+          <span>{format(date, 'hh:mm aa')}</span>
         </TimeContainer>
       </DetailsContainer>
     </ListItem>
