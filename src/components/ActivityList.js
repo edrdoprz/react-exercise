@@ -27,6 +27,8 @@ const ItemDetails = styled.div`
 const ItemDetailsHeader = styled.div`
   display: flex;
   font-size: 14px;
+  flex-flow: wrap;
+  gap: 4px;
 `;
 
 const ItemDetailsSubheader = styled.div`
@@ -41,21 +43,18 @@ const ItemDetailsSubheaderText = styled.span`
 const Title = styled.span`
   font-weight: 600;
   color: ${getColor("greyDark")};
-
-  + .blue-title {
-    margin-left: 4px;
-  }
+  white-space: nowrap;
 `;
 
 const BlueTitle = styled.span`
   font-weight: 600;
   color: #417caa;
+  white-space: nowrap;
 `;
 
 const TitleDetails = styled.span`
   font-weight: 400;
   color: ${getColor("greyDark")};
-  margin-left: 4px;
 `;
 
 const CountContainer = styled.div`
@@ -75,7 +74,7 @@ export const ActivityList = ({ activities, children, className }) => {
   return (
     <List className={className}>
       {activities.map((activity) => (
-        <ActivityListItem className="activity-list-item" activity={activity}>
+        <ActivityListItem key={activity.id} className="activity-list-item" activity={activity}>
           <ItemDetails>
             {activity.type === "voicemail" && (
               <>
@@ -163,7 +162,7 @@ export const ActivityList = ({ activities, children, className }) => {
               <>
                 <ItemDetailsHeader>
                   <Title>Added to Cadence</Title>
-                  <BlueTitle className="blue-title">{activity.dynamic_data.cadence_name}</BlueTitle>
+                  <BlueTitle>{activity.dynamic_data.cadence_name}</BlueTitle>
                 </ItemDetailsHeader>
                 <ItemDetailsSubheader>
                   <ItemDetailsSubheaderText>

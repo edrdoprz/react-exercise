@@ -14,6 +14,7 @@ const Button = styled.button`
   background: none;
   color: ${(props) => getColor(props.iconColor)};
   cursor: pointer;
+  white-space: nowrap;
 `;
 
 const Label = styled.label`
