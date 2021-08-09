@@ -19,6 +19,7 @@ const DetailsContainer = styled.div`
   padding: 12px 16px;
   border: 1px solid ${getColor('greyLightest')};
   flex: 1;
+  gap: 12px;
 `
 
 const TimeContainer = styled.div`
@@ -28,10 +29,11 @@ const TimeContainer = styled.div`
   font-weight: 600;
   font-size: 12px;
   color: ${getColor('grey')};
+  text-align: end;
+  white-space: nowrap;
 
   span:first-child {
     margin-bottom: 5px;
-    text-align: end;
   }
 `
 

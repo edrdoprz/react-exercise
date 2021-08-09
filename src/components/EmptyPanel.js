@@ -13,7 +13,7 @@ const Container = styled.div`
 
 export const EmptyPanel = ({ minHeight }) => {
   return (
-    <Container minHeight={minHeight} />
+    <Container className="empty-panel" minHeight={minHeight} />
   );
 };
 

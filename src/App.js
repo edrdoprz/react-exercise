@@ -1,7 +1,7 @@
 import { React, useEffect, useState } from "react";
 import styled from "styled-components";
 
-import { getColor } from "./_starter/theme/theme";
+import { getBreakpoint, getColor } from "./_starter/theme/theme";
 import { LeftColumn } from "./components/LeftColumn";
 import { RightColumn } from "./components/RightColumn";
 import { PersonTabbedPanel } from "./components/PersonTabbedPanel";
@@ -20,6 +20,16 @@ const ColumnsContainer = styled.div`
   flex: 1;
   padding: 8px;
   gap: 8px;
+
+  @media screen and (max-width: ${getBreakpoint('md')}) {
+    .right-column {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 
 export const App = ({ children }) => {

@@ -10,9 +10,9 @@ const Container = styled.div`
   gap: 8px;
 `;
 
-export const RightColumn = ({ children }) => {
+export const RightColumn = () => {
   return (
-    <Container>
+    <Container className="right-column">
       <EmptyPanel minHeight={226} />
       <EmptyPanel minHeight={428} />
       <EmptyPanel minHeight={194} />
