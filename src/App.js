@@ -32,7 +32,7 @@ const ColumnsContainer = styled.div`
   }
 `;
 
-export const App = ({ children }) => {
+export const App = () => {
   const [person, setPerson] = useState({
     details: {},
     activities: [],

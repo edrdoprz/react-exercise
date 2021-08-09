@@ -70,7 +70,7 @@ const CountContainer = styled.div`
   }
 `;
 
-export const ActivityList = ({ activities, children, className }) => {
+export const ActivityList = ({ activities, className }) => {
   return (
     <List className={className}>
       {activities.map((activity) => (

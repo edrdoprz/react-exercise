@@ -7,7 +7,7 @@ const Container = styled.div`
   min-height: 500px;
 `;
 
-export const PersonTrackingTab = ({ children }) => {
+export const PersonTrackingTab = () => {
   return (
     <Container>
       Tracking

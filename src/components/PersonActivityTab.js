@@ -9,7 +9,7 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-export const PersonActivityTab = ({ children }) => {
+export const PersonActivityTab = () => {
   return (
     <Container>
       <PersonActivityActions />

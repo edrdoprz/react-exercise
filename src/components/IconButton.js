@@ -28,7 +28,6 @@ const getIcon = (iconName) =>
   lazy(() => import(`../_starter/shared/Icons/${iconName}.js`));
 
 export const IconButton = ({
-  children,
   icon,
   iconColor,
   iconHeight,

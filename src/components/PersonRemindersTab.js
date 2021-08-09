@@ -7,7 +7,7 @@ const Container = styled.div`
   min-height: 500px;
 `;
 
-export const PersonRemindersTab = ({ children }) => {
+export const PersonRemindersTab = () => {
   return (
     <Container>
       Reminders

@@ -20,7 +20,7 @@ const Container = styled.div`
   overflow: auto
 `;
 
-export const AppShell = ({ children }) => {
+export const AppShell = () => {
   return (
     <>
       <TopNav />
