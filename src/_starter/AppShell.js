@@ -8,7 +8,7 @@ import { getColor } from "./theme/theme";
 
 const Layout = styled.div`
   display: flex;
-  height: 100%;
+  height: calc(100vh - 60px);
   width: 100%;
 `;
 const Container = styled.div`
@@ -17,6 +17,7 @@ const Container = styled.div`
   flex-direction: column;
   height: 100%;
   width: 100%;
+  overflow: auto
 `;
 
 export const AppShell = ({ children }) => {

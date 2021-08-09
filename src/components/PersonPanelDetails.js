@@ -15,6 +15,7 @@ const DetailsContainer = styled.div`
   align-items: center;
   padding: 20px 0;
   min-height: 96px;
+  text-align: center;
 `;
 
 const PersonName = styled.h2`
